@@ -20,3 +20,5 @@ def test_email(your_pattern):
             print("Pass")
 pattern = r"" # Your pattern here!
 test_email(pattern)
+
+#INITIAL TEST FOR GIT
