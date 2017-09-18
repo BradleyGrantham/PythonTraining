@@ -18,7 +18,5 @@ def test_email(your_pattern):
             print("Forgot to enter a pattern!")
         else:
             print("Pass")
-pattern = r"" # Your pattern here!
+pattern = r"\"?([-a-zA-Z0-9.`?{}]+@\w+\.\w+)\"?"
 test_email(pattern)
-
-#INITIAL TEST FOR GIT
