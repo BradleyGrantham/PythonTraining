@@ -95,6 +95,6 @@ plt.show('iris_svm.png')
 
 '''
 It makes sense that all three have the same accuracy scores
-given that they have the same number of yellow/purple points
+given that they have the same number of yellow/purple (classes) points
 either side of their respective boundary
 '''
