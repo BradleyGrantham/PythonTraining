@@ -57,12 +57,15 @@ iris_y_test = iris_y[indices[-test_size:]]
 # fit linear support vector machine to data
 svm_lin = svm.SVC(kernel='linear')
 svm_lin.fit(iris_X_train, iris_y_train)
+svm_lin_score = svm_lin.score(iris_X_test, iris_y_test)
 
-svm_poly = svm.SVC(kernel='poly', degree=3)
+svm_poly = svm.SVC(kernel='poly', degree=4)
 svm_poly.fit(iris_X_train, iris_y_train)
+svm_poly_score = svm_poly.score(iris_X_test, iris_y_test)
 
 svm_rbf = svm.SVC(kernel='rbf')
 svm_rbf.fit(iris_X_train, iris_y_train)
+svm_rbf_score = svm_rbf.score(iris_X_test, iris_y_test)
 
 # plot all of the findings
 X1_lin, X2_lin = plot_desicion_boundary(iris_X_train, svm_lin)
@@ -77,4 +80,4 @@ plt.plot(X1_lin, X2_lin, c='blue')
 plt.plot(X1_poly, X2_poly, c='red')
 plt.plot(X1_rbf, X2_rbf, c='green')
 plt.scatter(iris_X_train[:, 0], iris_X_train[:, 1], c=iris_y_train)
-plt.savefig('iris_svm.png')
+plt.show('iris_svm.png')
