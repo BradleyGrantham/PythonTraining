@@ -34,7 +34,7 @@ clf.fit(diabetes_X[:train_size], diabetes_y[:train_size])
 
 print 'Alpha: ', clf.best_estimator_.alpha
 print 'Best score: ', clf.best_score_
-print 'Manual score: '. clf.score(diabetes_X[train_size:], diabetes_y[train_size:])
+print 'Manual score: ', clf.score(diabetes_X[train_size:], diabetes_y[train_size:])
 # print clf.cv_results_['mean_test_score']
 # print clf.cv_results_['std_test_score']
 
@@ -49,8 +49,8 @@ I've copied this bit below for now
 
 lasso = linear_model.LassoCV()
 k_fold = KFold(3)
-for k, (train, test) in enumerate(k_fold.split(X, y)):
-    lasso.fit(X[train], y[train])
+for k, (train, test) in enumerate(k_fold.split(diabetes_X, diabetes_y)):
+    lasso.fit(diabetes_X[train], diabetes_y[train])
     print("[fold {0}] alpha: {1:.5f}, score: {2:.5f}".
-          format(k, lasso.alpha_, lasso.score(X[test], y[test])))
+          format(k, lasso.alpha_, lasso.score(diabetes_X[test], diabetes_y[test])))
 
