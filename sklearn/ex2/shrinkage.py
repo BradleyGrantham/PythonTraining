@@ -79,7 +79,7 @@ print([ridge_regr.set_params(alpha=alpha
 
 '''
 Ridge regression uses regularization. That is the (+LAMBDA) bit when using a cost
-function
+function (I think)
 
 The chunk of code above is essentially showing that as we increase alpha
 the R^2 value of our predictions is coming down
