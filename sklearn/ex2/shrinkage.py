@@ -86,6 +86,9 @@ The chunk of code above is essentially showing that as we increase alpha
 the R^2 value of our predictions is coming down
 Hard to know whether this is what should happen given that I have no idea what the data
 actually has in it
+
+I'm guessing that because we have 422 datapoints, we don't want to regularize it
+too much
 '''
 
 
