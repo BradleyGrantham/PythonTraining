@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53945bf7-99d1-4686-a033-66870d0b0297" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sklearn/ex2/svm_exercise.py" afterPath="$PROJECT_DIR$/sklearn/ex2/svm_exercise.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sklearn/datasets_ex1.py" afterPath="$PROJECT_DIR$/sklearn/ex1/datasets_ex1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -140,12 +140,6 @@
               <item name="Python Training" type="462c0819:PsiDirectoryNode" />
               <item name="sklearn" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Python Training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python Training" type="462c0819:PsiDirectoryNode" />
-              <item name="sklearn" type="462c0819:PsiDirectoryNode" />
-              <item name="ex2" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -159,6 +153,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sklearn/ex1" />
       <recent name="$PROJECT_DIR$/sklearn/ex2" />
     </key>
   </component>
@@ -312,9 +307,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="824" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25516224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25516224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -633,7 +627,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sklearn/datasets_ex1.py">
+    <entry file="file://$PROJECT_DIR$/sklearn/ex1/datasets_ex1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
