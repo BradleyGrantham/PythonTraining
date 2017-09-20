@@ -69,6 +69,7 @@ diabetes_y_test = diabetes_y[indices[-20:]]
 alphas = np.logspace(-4, -1, 6) # return numbers in a logspace
 # this particular line of code will return 6 numbers evenly space between
 # 10^-4 and 10^-1
+
 print diabetes_X_train.shape
 
 print([ridge_regr.set_params(alpha=alpha
