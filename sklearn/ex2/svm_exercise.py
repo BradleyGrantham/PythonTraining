@@ -3,11 +3,16 @@ import pandas as pd
 from sklearn import datasets
 from sklearn import svm
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+
+'''
+Solution to exercise at
+http://scikit-learn.org/stable/tutorial/statistical_inference/supervised_learning.html#curse-of-dimensionality
+'''
 
 def plot_desicion_boundary(X, svm):
     '''
-
+    Return two numpy arrays, one with 'x' coords and one with 'y' coords
+    so that the desicion boundary of an SVM can be plotted
     :param X: the X data of the dataset
     :param svm: a support vector machine estimate
     :return: two arrays to be plotted (like an x and y coordinate)
@@ -32,13 +37,12 @@ def plot_desicion_boundary(X, svm):
 
     return X1, X2
 
-
 #load the data
 iris = datasets.load_iris()
 iris_X = iris.data
 iris_y = iris.target
 
-print np.unique(iris_y) # see what classes there are
+# print np.unique(iris_y) # see what classes there are
 
 # we only want classes 1 and 2 so get rid of the 0's
 iris_X = iris_X[iris_y!=0, :2] # also only want first two features
@@ -59,13 +63,20 @@ svm_lin = svm.SVC(kernel='linear')
 svm_lin.fit(iris_X_train, iris_y_train)
 svm_lin_score = svm_lin.score(iris_X_test, iris_y_test)
 
+# fit polynomial support vector machine to data
 svm_poly = svm.SVC(kernel='poly', degree=4)
 svm_poly.fit(iris_X_train, iris_y_train)
 svm_poly_score = svm_poly.score(iris_X_test, iris_y_test)
 
+# fit rbf support vector machine to data
 svm_rbf = svm.SVC(kernel='rbf')
 svm_rbf.fit(iris_X_train, iris_y_train)
 svm_rbf_score = svm_rbf.score(iris_X_test, iris_y_test)
+
+# print out the accuracy scores
+print 'Linear model score: ' + str(round(svm_lin_score, 2))
+print 'Polynomial model score: ' + str(round(svm_poly_score, 2))
+print 'RBF score: ' + str(round(svm_rbf_score, 2))
 
 # plot all of the findings
 X1_lin, X2_lin = plot_desicion_boundary(iris_X_train, svm_lin)
@@ -81,3 +92,9 @@ plt.plot(X1_poly, X2_poly, c='red')
 plt.plot(X1_rbf, X2_rbf, c='green')
 plt.scatter(iris_X_train[:, 0], iris_X_train[:, 1], c=iris_y_train)
 plt.show('iris_svm.png')
+
+'''
+It makes sense that all three have the same accuracy scores
+given that they have the same number of yellow/purple points
+either side of their respective boundary
+'''
