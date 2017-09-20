@@ -85,8 +85,7 @@ function (I think)
 The chunk of code above is essentially showing that as we increase alpha
 the R^2 value of our predictions is coming down
 Hard to know whether this is what should happen given that I have no idea what the data
-actually has in it, although, given that there are 10 dimensions, I'm assuming a straight line
-isn't the best option, hence regularization helps
+actually has in it
 '''
 
 
