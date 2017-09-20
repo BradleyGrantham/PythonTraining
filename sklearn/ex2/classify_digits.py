@@ -21,7 +21,7 @@ digits_y = digits.target
 # split into a training set and test set by random indexing
 np.random.seed(0)
 indices = np.random.permutation(len(digits_X))
-train_size = int(round(0.1*len(digits_X)))
+train_size = int(round(0.1*len(digits_X))) # training size should be ~ 10% of data
 
 digits_X_train = digits_X[indices[:-train_size]]
 digits_y_train = digits_y[indices[:-train_size]]
