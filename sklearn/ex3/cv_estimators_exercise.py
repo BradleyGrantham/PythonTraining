@@ -39,18 +39,19 @@ print 'Manual score: ', clf.score(diabetes_X[train_size:], diabetes_y[train_size
 # print clf.cv_results_['std_test_score']
 
 '''
-Now to check the alpha obtained in this
-'manual' version compared to the automatic
-
-I've copied this bit below for now
+KFold.split() simply generates indices. Enumerate assigns each
+of those sets its own index
+EG. k=1 -> train=0:10 & test=10:20 
 '''
 
 
 
 lasso = linear_model.LassoCV()
-k_fold = KFold(3)
+k_fold = KFold(n_splits=4)
 for k, (train, test) in enumerate(k_fold.split(diabetes_X, diabetes_y)):
     lasso.fit(diabetes_X[train], diabetes_y[train])
-    print("[fold {0}] alpha: {1:.5f}, score: {2:.5f}".
-          format(k, lasso.alpha_, lasso.score(diabetes_X[test], diabetes_y[test])))
+    print lasso.alpha_, lasso.score(diabetes_X[test], diabetes_y[test])
 
+'''
+We get fairly big variations in alpha which is not good
+'''
